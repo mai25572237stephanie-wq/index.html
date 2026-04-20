@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrefour Encuesta</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .poster-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .poster-image {
+            width: 100%;
+            display: block;
+        }
+
+        .start-button {
+            position: absolute;
+            bottom: 30px; /* 距离图片底部 */
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .start-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="poster-container">
+        <img src="原海报.png" alt="Carrefour Encuesta" class="poster-image">
+        <!-- 按钮先随意 href，JavaScript 会覆盖 -->
+        <a href="#" class="start-button">Comenzar encuesta</a>
+    </div>
+
+    <script>
+        // ⭐ 只需修改这里的链接即可随时更换问卷
+        const surveyLink = "https://2708415.playcode.io/"; 
+
+        // 获取按钮并设置链接
+        const button = document.querySelector(".start-button");
+        button.href = surveyLink;
+    </script>
+</body>
+</html>
